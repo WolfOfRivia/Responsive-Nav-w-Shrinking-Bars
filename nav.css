@@ -1,0 +1,156 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  padding: 10px 100px;
+  box-sizing: border-box;
+  transition: .3s;
+  z-index: 5;
+  font-family: 'Open Sans'
+}
+
+nav.fade {
+  background: rgba(0,0,0,0.8);
+  height: 100px;
+  padding: 10px 100px;
+}
+
+nav .logo {
+  padding: 22px 20px;
+  height: 80px;
+  float: left;
+  font-size: 24px;
+  transition: .3s;
+  color: #fff;
+}
+
+.menu {
+  list-style: none;
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.menu li a {
+  line-height: 80px;
+  color: #fff;
+  padding: 12px 30px;
+  text-decoration: none;
+  transition: .3s;
+}
+
+nav.fade ul li a {
+  color: #fff;
+}
+
+.menu li a:focus {
+  outline: none;
+}
+
+.menu li a:hover {
+  color: #3f8ede;
+}
+
+.menu li a.active {
+  background: #3f8ede;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.fa-bars {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+
+  /* RESPONSIVE NAV */
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: .5s;
+    background-color: #000;
+    background: rgba(0,0,0,1);
+    background: rgba(0,0,0,0.9);
+  }
+
+  .menu {
+    width: 100%;
+    background-color: #000;
+    background: rgba(0,0,0,1);
+    background: rgba(0,0,0,0.9);
+    position: absolute;
+    top: 100px;
+    left: 0;
+    transition: .5s;
+    max-height: 0px;
+    overflow: hidden;
+  }
+
+  .logo {
+    position: fixed;
+    top: 10px;
+    left: 5px;
+  }
+
+  .bars {
+    position: fixed;
+    width: 35px;
+    height: 25px;
+    z-index: 10;
+    right: 25px;
+    top: 35px;
+    transition: .5s;
+  }
+
+  .bar {
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    transition: .5s;
+    position: absolute;
+    right: 0;
+  }
+
+  /* SEPARATES BARS */
+  .bar:nth-of-type(2) {
+    top: 10px;
+  }
+
+  .bar:nth-last-of-type(3) {
+    top: 20px;
+  }
+
+  /* ADD WIDTH TO SPECIFIC BAR WITH JQUERY ON NAV TOGGLE */
+  .width-20 {
+    width: 20px;
+  }
+
+  .width-10 {
+    width: 10px;
+  }
+
+  .menu li {
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
+  }
+
+  .expand {
+    max-height: 400px;
+  }
+
+}
