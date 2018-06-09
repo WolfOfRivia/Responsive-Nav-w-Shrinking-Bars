@@ -1,14 +1,51 @@
-<nav>
-  <div class="logo"><!-- YOUR LOGO HERE --></div>
-    <div class='toggle-menu bars'>
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-   </div>
-   <ul class="menu">
-     <li><a href="">Home</a></li>
-     <li><a href="">About</a></li>
-     <li><a href="">Services</a></li>
-     <li><a href="">Contact</a></li>
-   </ul>
-</nav>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conquer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+
+      $('.toggle-menu').on('click', function() {
+         $('.menu').toggleClass('expand');
+         $('.bar:nth-of-type(1)').toggleClass('width-10');
+         $('.bar:nth-of-type(2)').toggleClass('width-20');
+      });
+
+   });
+
+   // Header effect will NOT happen on screens less than 900 pixels
+    var windowWidth = $(window).width();
+    if(windowWidth > 900){
+
+      $(window).on('scroll', function() {
+        if($(window).scrollTop()) {
+          $('nav').addClass('fade');
+        } else {
+          $('nav').removeClass('fade');
+        }
+      });
+
+    }
+
+  </script>
+</head>
+<body>
+  <nav>
+    <div class="logo"><!-- YOUR LOGO HERE --></div>
+      <div class='toggle-menu bars'>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="menu">
+      <li><a href="">Home</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Services</a></li>
+      <li><a href="">Contact</a></li>
+    </ul>
+  </nav>
+</body>
